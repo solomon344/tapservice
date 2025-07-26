@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'authentication',
     'api',
     'django_filters',
+    'django_createsuperuser'
     # 'rest_framework_simplejwt',
     # 'google_auth',
     
