@@ -56,8 +56,8 @@ class MyTokenObtainPairView(APIView):
     def post(self, request: Request, *args, **kwargs):
         
         data = request.data
-        otp = data.get('otp')
-        finder = data.get('finder')
+        otp = data.get('otp',None)
+        finder = data.get('finder',None)
         otpverify = Verify_otp(otp,finder)  
 
         if otpverify.is_valid():
@@ -73,7 +73,7 @@ class MyTokenObtainPairView(APIView):
         else:
             return Response(
                 {"message": "Invalid OTP."},
-                status=status.HTTP_400_BAD_REQUEST
+                status=status.HTTP_403_FORBIDDEN
             )
 
                 
@@ -194,4 +194,4 @@ class LoginView(APIView):
             }
         })
 
-
+ 

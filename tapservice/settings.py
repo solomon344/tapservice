@@ -15,11 +15,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
+# Google credentials config
+GOOGLE_CLIENT_ID = env('GOOGLE_CLIENT_ID')
+GOOGLE_CLIENT_SECRET = env('GOOGLE_CLIENT_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['10.0.2.2', 'localhost', '127.0.0.1','.ngrok-free.app']
+ALLOWED_HOSTS = ['10.0.2.2', 'localhost', '127.0.0.1','.ngrok-free.app','tapservice.onrender.com']
 
 AUTH_USER_MODEL = 'authentication.User'
 # Application definition
