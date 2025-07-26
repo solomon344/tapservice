@@ -16,4 +16,5 @@ dependencies = [
     "markdown>=3.8",
     "mysqlclient>=2.2.7",
     "requests>=2.32.4",
+    "whitenoise>=6.9.0",
 ]

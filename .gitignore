@@ -12,3 +12,8 @@ wheels/
 # Django
 *.log
 .env
+
+static/
+media/
+*.sqlite3
+staticfiles/
